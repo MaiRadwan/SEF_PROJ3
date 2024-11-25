@@ -1,0 +1,51 @@
+*{
+    /* background-color: #78c0ff17; */
+}
+
+:root{
+    --maincolor:#23527C;
+    --subcolor:#FEE161;
+}
+.as{
+    color: aliceblue;
+}
+.as:hover{
+    color: aliceblue;
+}
+.title_carousel{
+    background-color: #17a3b8d7; 
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.icon_img{
+    display: inline;
+     float: left;
+     padding: 2px;
+     margin-top: 5px;
+     margin-right: 5px;
+}
+.popular{
+    height: 70px;
+    size: 50px; 
+    text-align: center; 
+    padding: 10px;
+    padding-top:20px;
+}
+.hoverr_text{
+   color: aliceblue;
+}
+
+#backgroundImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    image-orientation: from-image;
+    background-image: url(/images/luxour.webp);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    z-index: -1;
+    }
+    

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 3</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"/> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .toggle.ios, .toggle-on.ios, .toggle-off.ios  { border-radius: 20px; }
+      .toggle-handle{border-radius: 80px; margin: 0px 20px 20px 10p;}
+      .toggle-on, .toggle-off { display: none;}
+    
+    </style>
+</head>
+<body style="background-color: #78c0ff3d;">
+    <!-- <nav class="navbar navbar" style="margin-bottom: 0;">
+        <div class="container-fluid">
+          <div class="navbar-header" style="background-color: #3379b7c9; border-radius: 30px;padding-left:5px ;padding-right:5px ">
+            <img src="images/tourism.png" width="40px"height ="40px" class="icon_img">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+              <span class="icon-bar" style="background-color:aliceblue;"></span>
+              <span class="icon-bar"style="background-color:aliceblue;"></span>
+              <span class="icon-bar"style="background-color:aliceblue;"></span>                  
+            </button>
+           
+            <a class="navbar-brand" style="color: aliceblue;" href="#">Travel GO</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav" style="color: 388DA9;">
+              <li class="active"><a href="#">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Trips <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Aswan</a></li>
+                  <li><a href="#">Luxour</a></li>
+                  <li><a href="#">Fayoum</a></li>
+                </ul>
+              </li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="margin-right: -15px;">
+                <li style="padding-top: 8px;"><input type="text" class="form-control" id="search_text"  placeholder="Search" name="search"></li>
+                <li ><a href="#" id="search_it"><span class="glyphicon glyphicon-search" ></span> </a> </li>
+                <li><a href="#"  id="log_form"  data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+             
+
+         
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+
+      <nav class="navbar navbar-expand-sm  navbar-light justify-content-start ">
+        <!-- Brand -->
+         <div class="pl-1"  style="background-color: #17A2B8; border-radius: 10px;;padding-right:5px ; ">
+        <img src="images/tourism.png" width="40px"height ="40px" class="icon_img">
+        <span class="navbar-brand navbar-dark pt-1.5" href="#" style="color: aliceblue;">Travel Go</span>
+      </div>
+      <div class="collapse navbar-collapse   "id="collapsibleNavbar">
+        <!-- Links -d-flex"-->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+          </li>
+      
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Dropdown link
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </li>
+        </ul>
+        <form  class="form-inline my-2 my-lg-0 ml-auto"  >
+          <input class="form-control mr-sm-2" id="search_text" type="text" placeholder="Search">
+          <button class="btn btn-outline-info"  id="search_it" style="border-radius: 10px;"><i class="fas fa-search  "></i></button>
+          <button class="btn btn-outline-info ml-2 mr-2" data-toggle="modal" data-target="#myModal" style="border-radius: 10px;"> Log in<i class="fas fa-sign-in-alt ml-2"></i></button>
+
+        </form>
+      </div>
+      </nav>
+     
+      
+      
+<!-- model div -->
+      <div class="modal fade" id="myModal" role="dialog" >
+        <div class="modal-dialog">
+     <!-- Modal content-->
+     <div class="modal-content" >
+      <div class="modal-header bg-info" >
+        <h4 class="modal-title text-left mt-1" style="color:aliceblue" >Sign in</h4>
+        <button type="button" class="close   m-1  pt-1 pb-2" data-dismiss="modal"  style="color:#377cb8 ;background-color: aliceblue;border-radius: 10px;">&times;</button>
+      </div>
+      <div class="container">
+      <form action="/action_page.php">
+          <div>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" class="form-control " style="width: 50%;" id="email" placeholder="Enter email" name="email">
+          </div>
+          <br>
+            <div>
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control "style="width: 50%;" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+          <br>
+          <form action="/action_page.php">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input bg-info" id="switch1" name="example">
+              <label class="custom-control-label " for="switch1">Remember me</label>
+            </div>
+      </form>
+    </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-default bg-info"data-dismiss="modal" data-toggle="modal_logged" data-target="#login" id="log_in_btn"  style=" color:aliceblue" >Log in</button>
+        <button type="button" class="btn btn-default  bg-light border border-info" style="color: #17A2B8;" data-dismiss="modal" >Sign up</button>
+      </div>
+    
+    
+  </div>
+      
+</div>
+</div>
+
+<div class="modal fade" id="sign up" role="dialog" >
+  <div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content" >
+<div class="modal-header bg-info" >
+  <h4 class="modal-title text-left mt-1" style="color:aliceblue" >Sign in</h4>
+  <button type="button" class="close   m-1  pt-1 pb-2" data-dismiss="modal"  style="color:#377cb8 ;background-color: aliceblue;border-radius: 10px;">&times;</button>
+</div>
+<div class="container">
+<form action="/action_page.php">
+    <div>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" class="form-control " style="width: 50%;" id="email" placeholder="Enter email" name="email">
+    </div>
+    <br>
+      <div>
+        <label for="pwd">create Password:</label>
+        <input type="password" class="form-control "style="width: 50%;" id="pwd" placeholder="Enter password" name="pwd">
+      </div>
+    <br>
+    <form action="/action_page.php">
+      <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input bg-info" id="switch1" name="example">
+        <label class="custom-control-label " for="switch1">Remember me</label>
+      </div>
+</form>
+</div>
+<div class="modal-footer">
+  <button type="submit" class="btn btn-default bg-info"data-dismiss="modal" data-toggle="modal_logged" data-target="#login" id="log_in_btn"  style=" color:aliceblue" >Log in</button>
+  <button type="button" class="btn btn-default  bg-light border border-info" style="color: #17A2B8;" data-dismiss="modal" >Sign up</button>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+
+
+    <div class="const_social ">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ul class="carousel-indicators"style="bottom:  0px;" >
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ul>
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img src="images/giza.jpg" alt="Los Angeles" style="width:100%;height:400px">
+              <div class="carousel-caption title_carousel" style="bottom:  0px; padding-top: 0; padding-bottom: 0 ;" >
+                <h3>Giza</h3>
+                <p>The Pyramids are waiting for you!</p>
+                <br>
+              </div>
+            </div>
+      
+            <div class="carousel-item">
+              <img src="images/luxour.webp" alt="Chicago" style="width:100%; height:400px;">
+              <div class="carousel-caption title_carousel" style="bottom:  0px; padding-top: 0;padding-bottom: 0;">
+                <h3>Luxour</h3>
+                <p>Thank you, Luxour!</p>
+                <br>
+              </div>
+            </div>
+          
+            <div class="carousel-item">
+              <img src="images/fayoum.jpg" alt="New York" style="width:100%;height:400px;">
+              <div class="carousel-caption title_carousel"  style="bottom:  0px; padding-top: 0;padding-bottom: 0 ;">  
+                <h3>Fayoum</h3>
+                <p>Lakes and sand all day!</p>
+                <br>
+              </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="carousel-control-prev shadow-sm" href="#myCarousel" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next shadow-sm" href="#myCarousel" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+      </div>  
+    </div>
+    <br>
+    <div class="media container">
+      <div class="media-left p-2">
+        <img src="images/fish and peope.jpg" class="media-object img-rounded" style="width:200px">
+      </div>
+      <div class="media-body pt-3 pl-2">
+        <h4 class="media-heading ">Left-aligned</h4>
+        <span >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+      </div>
+    </div>
+    <hr>
+    <div class="shadow-lg text-info p-3  rounded bg-light well well-lg text-center text-uppercase	font-weight-bold  border-bottom border-info"  >popular destenisions in egypt</div>
+    <div id="accordion">
+      <div class="card">
+        
+          <a class="card-link as card-header p-2 bg-info " data-toggle="collapse" href="#collapseOne">
+            Collapsible Group Item #1      <i class="fa fa-chevron-circle-down float-right p-2 ml-2 d-inline " aria-hidden="true"></i>
+          </a>
+        
+        <div id="collapseOne" class="collapse show" data-parent="#accordion">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+      
+          <a class="collapsed card-link as p-2  bg-info" data-toggle="collapse" href="#collapseTwo">
+          Collapsible Group Item #2      <i class="fa fa-chevron-circle-down float-right p-2 ml-2 d-inline " aria-hidden="true"></i>
+        </a>
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+      <div class="card ">
+       
+          <a class="collapsed card-link as p-2 bg-info float-left"data-toggle="collapse" href="#collapseThree">
+            Collapsible Group Item #3             <i class="fa fa-chevron-circle-down float-right p-2 ml-2 d-inline " aria-hidden="true"></i>
+          </a>
+        <div id="collapseThree" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+   <div class="container">
+    <div class="text-center mb-2 font-weight-bold">meet our team </div>
+      <div class="row">
+        <div class="col"><div class="card">
+          <img class="card-img-top" src="images/clothing company.jpg" alt="Card image" style="width:100%">
+
+          <div class="card-body">
+            <h4 class="card-title">Jane Doe</h4>
+            <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+      </div>
+      <div class="col"><div class="card" >
+        <img class="card-img-top" src="images/clothing company.jpg" alt="Card image" style="width:100%">
+
+        <div class="card-body">
+          <h4 class="card-title">Jane Doe</h4>
+          <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+      </div>
+    </div>  <div class="col"><div class="card" >
+      <img class="card-img-top" src="images/clothing company.jpg" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Jane Doe</h4>
+        <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+  </div>
+        
+      </div>
+    </div>
+       <div class="">
+        dsdhsgdj
+       </div>
+
+    
+
+
+    <script  src="js/script.js"></script>
+</body>
+</html>
